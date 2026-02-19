@@ -254,4 +254,6 @@ def get_stats():
 
 if __name__ == '__main__':
     init_data_file()
-    app.run(debug=True, port=5000)
+    host="0.0.0.0"
+    port = os.environ.get("PORT")
+    app.run(debug=True, port=port, host=host)
